@@ -6,18 +6,20 @@ const btn = document.querySelector('#btn-collapse')
 
 for(let i = 0; i < contentPart.length; i++){
     contentPart[i].addEventListener('click',function(){
-        for(let j = 0; j < contentPart.length; j++){
-            contentPart[j].classList.remove('active');
-        }
+      closeAll();
         this.classList.add('active');
         
     });
 }
 btn.addEventListener('click',function(){
+  closeAll();
+});
+
+function closeAll(){
     for(let j = 0; j < contentPart.length; j++){
         contentPart[j].classList.remove('active');
     }
-});
+}
 
 
 //v1
