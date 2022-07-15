@@ -1,5 +1,28 @@
 'use strict';
 
+//v2
+const contentPart = document.querySelectorAll('.content-part')
+const btn = document.querySelector('#btn-collapse')
+
+for(let i = 0; i < contentPart.length; i++){
+    contentPart[i].addEventListener('click',function(){
+        for(let j = 0; j < contentPart.length; j++){
+            contentPart[j].classList.remove('active');
+        }
+        this.classList.add('active');
+        
+    });
+}
+btn.addEventListener('click',function(){
+    for(let j = 0; j < contentPart.length; j++){
+        contentPart[j].classList.remove('active');
+    }
+});
+
+
+//v1
+
+/*
 const btnCollapse = document.getElementById('btn-collapse'), 
         title = document.getElementsByClassName('content-title'),
         contentPart = document.getElementsByClassName('content-part'),
@@ -36,3 +59,5 @@ const closing = btnCollapse.addEventListener('click', function(){
     }   
 })
 closing();
+
+*/

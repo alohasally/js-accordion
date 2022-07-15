@@ -55,6 +55,8 @@ section#story{
 .content-body{
 
     width: 700px;
+    display: none;
+
 }
 #btn-collapse{
 
@@ -77,4 +79,9 @@ section#story{
 #btn-collapse:hover{
   background: var(--button-hover-bg-color);
   outline: 0;
+}
+
+/* v2 */
+.active .content-body{
+    display:block;
 }
